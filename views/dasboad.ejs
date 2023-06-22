@@ -1,0 +1,205 @@
+<%- include('portals/header') %>
+<%- include('portals/menu') %>
+
+
+<section class="d-flex">
+    <div class="col-2 shadow rounded d-inline-block m-1">
+        <ul class="list-group">
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder" onclick="homeofdas()">Home</li>
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder" onclick="funshowone()">Add post</li>
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder" onclick="funshowtwo()">Add portfolio</li>
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder" onclick="funshowthree()">Edit site</li>
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder" onclick="funshowfour()">Contracted</li>
+            <li class="list-group-item m-1 hover-dasboad-item text-light text-bolder">Others</li>
+        </ul>
+    </div>
+    <div class="col-10 shadow rounded d-inline-block m-1">
+        <div class="w-100 p-4">
+            <div class="m-5" id="homeondas">
+                <h1 class="text-bolder text-center text-light">Welcome to dasboad</h1>
+            </div>
+
+            <div class="addpost m-5" id="addpost">
+                <h1 class="text-bolder text-center text-light">Post Something</h1>
+                <form action="/post" method="post" enctype="multipart/form-data">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="content">Add your content</label>
+                        <textarea class="text-light p-2 w-100 bg-dark rounded" name="content" id="content" placeholder="Write something...." cols="10" rows="5"></textarea>
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Select a picture</label>
+                        <input value="text-light p-2 w-100 d-block bg-dark rounded" type="file" name="postimage" id="postimage">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Post now">
+                    </div>
+                </form>
+            </div>
+
+            <div class="addpost m-5" id="addportfolio">
+                <h1 class="text-bolder text-center text-light">Add portfolio</h1>
+                <form action="/portfolio" method="post" enctype="multipart/form-data">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="tittle">Add your content</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" id="portfoliocontent" name="portfoliocontent" placeholder="Write tittle">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Select a picture</label>
+                        <input value="text-light p-2 w-100 d-block bg-dark rounded" type="file" name="portimage" id="portimage">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Add now">
+                    </div>
+                </form>
+            </div>
+
+            <div class="addpost m-5" id="editsite">
+                <h1 class="text-bolder text-center text-light">Edit site</h1>
+                <form action="/editsite" method="post">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="heroheader">Write hero main header</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].heroheader %>" id="heroheader" name="heroheader" placeholder="Write hero main header....">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="herodes">Edit hero description</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].herodes %>" id="herodes" name="herodes" placeholder="Edit hero description....">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="herondheader">Edit your 2nd heading of hero</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].herondheader %>" id="herondheader" name="herondheader" placeholder="Edit your 2nd heading of hero....">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="aboutsite">Edit your about</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].aboutsite %>" id="aboutsite" name="aboutsite" placeholder="Edit your about....">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="portfoliodes">Edit portfolio section description</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].portfoliodes %>" id="portfoliodes" name="portfoliodes" placeholder="Edit portfolio section description....">
+                    </div>
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="createnewprojectdes">Edit create project description</label>
+                        <input class="d-block w-100 p-2 px-4 text-light bg-dark border-none" type="text" value="<%= sityinfo[0].createnewprojectdes %>" id="createnewprojectdes" name="createnewprojectdes" placeholder="Edit portfolio section description....">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Add now">
+                    </div>
+                </form>
+                <form action="/editherobannerone" method="post" enctype="multipart/form-data">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit hero one banner photo</label>
+                        <input value="text-light p-2 w-100 d-block bg-dark rounded" type="file" name="heroone" id="heroone">
+                        <input type="submit" value="Change">
+                    </div>
+                </form>
+                <form action="/editherobannertwo" method="post" enctype="multipart/form-data">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit hero two banner photo</label>
+                        <input value="text-light p-2 w-100 d-block bg-dark rounded" type="file" name="herotwo" id="herotwo">
+                        <input type="submit" value="Change">
+                    </div>
+                </form>
+                <form action="/editherobannerthree" method="post" enctype="multipart/form-data">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit hero three banner photo</label>
+                        <input value="text-light p-2 w-100 d-block bg-dark rounded" type="file" name="heroothree" id="heroothree">
+                        <input type="submit" value="Change">
+                    </div>
+                </form>
+                <form action="/plan/<%= planss[0]._id %>" method="post">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit plan one</label>
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[0].planeonetittle %>" type="text" name="planeonetittle" id="planeonetittle" placeholder="tittle....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[0].planeoneprice %>" type="text" name="planeoneprice" id="planeoneprice" placeholder="Price....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[0].planeonedes %>" type="text" name="planeonedes" id="planeonedes" placeholder="Description....">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Add now">
+                    </div>
+                </form>
+                <form action="/plan/<%= planss[1]._id %>" method="post">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit plan two</label>
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[1].planeonetittle %>" type="text" name="planeonetittle" id="planeonetittle" placeholder="tittle....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[1].planeoneprice %>" type="text" name="planeoneprice" id="planeoneprice" placeholder="Price....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[1].planeonedes %>" type="text" name="planeonedes" id="planeonedes" placeholder="Description....">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Add now">
+                    </div>
+                </form>
+                <form action="/plan/<%= planss[2]._id %>" method="post">
+                    <div class="py-2">
+                        <label class="text-light w-100 fs-2 py-2" for="image">Edit plan three</label>
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[2].planeonetittle %>" type="text" name="planeonetittle" id="planeonetittle" placeholder="tittle....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[2].planeoneprice %>" type="text" name="planeoneprice" id="planeoneprice" placeholder="Price....">
+                        <input class="text-light d-block p-2 w-100 d-block bg-dark rounded" value="<%= planss[2].planeonedes %>" type="text" name="planeonedes" id="planeonedes" placeholder="Description....">
+                    </div>
+                    <div class="py-2 text-center">
+                        <input class="text-center text-light text-bolder bg-danger border-none rounded shadow py-2 px-4" type="submit" value="Add now">
+                    </div>
+                </form>
+            </div>
+            <div class="addpost m-5" id="contracted">
+                <% if (messaged.length == 0) { %>
+                    <h1 class="text-bolder text-center text-light">Nothing here</h1>
+                <% } else { %>
+                    <h4 class="text-light">Total messages (<%= messaged.length %>)</h4>
+                    
+                    <% for (let id = 0; id < messaged.length; id++) { %>
+                        <div class="m-4 p-4 bg-danger">
+                            <h6><span class="text-info d-inline-block px-2">Your name: </span><span class="text-light text-bolder"><%= messaged[id].sendmsgname %></span></h6>
+                            <h6><span class="text-info d-inline-block px-2">Your phone number: </span><span class="text-light text-bolder"><%= messaged[id].sendmsgphone %></span></h6>
+                            <h6><span class="text-info d-inline-block px-2">Your message: </span><span class="text-light text-bolder"><%= messaged[id].sendmsgtext %></span></h6>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+
+function homeofdas() {
+    homeondas.style.display = "block";
+    addpost.style.display = "none";
+    addportfolio.style.display = "none";
+    editsite.style.display = "none";
+    contracted.style.display = "none";
+}
+function funshowone() {
+    homeondas.style.display = "none";
+    addpost.style.display = "block";
+    addportfolio.style.display = "none";
+    editsite.style.display = "none";
+    contracted.style.display = "none";
+}
+function funshowtwo() {
+    homeondas.style.display = "none";
+    addpost.style.display = "none";
+    addportfolio.style.display = "block";
+    editsite.style.display = "none";
+    contracted.style.display = "none";
+}
+function funshowthree() {
+    homeondas.style.display = "none";
+    addpost.style.display = "none";
+    addportfolio.style.display = "none";
+    editsite.style.display = "block";
+    contracted.style.display = "none";
+}
+function funshowfour() {
+    homeondas.style.display = "none";
+    addpost.style.display = "none";
+    addportfolio.style.display = "none";
+    editsite.style.display = "none";
+    contracted.style.display = "block";
+}
+
+</script>

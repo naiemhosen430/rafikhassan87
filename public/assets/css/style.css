@@ -1,0 +1,232 @@
+.box-circle{
+    border-radius: 20px;
+}
+
+.hero-second-frontsize{
+    line-height: 80px;
+    font-size: 60px;
+    font-family: "Sofia", sans-serif;
+}
+
+.padding_bottom{
+    margin-bottom: 350px;
+}
+
+.hover-btn {
+    transition: .5s ease-in-out;
+}
+.hover-btn:hover {
+    background-color: antiquewhite;
+    color: black;
+    transition: .5s ease-in-out;
+}
+
+.woficon{
+    width: 200px;
+    margin: 30px;
+}
+
+.imagehight{
+    height: 300px;
+}
+
+.background-own{
+    background-color: rgb(29, 46, 59);
+}
+
+.extra-font-size{
+    font-size: 50px;
+}
+
+.photoone{
+    margin-left: 20px;
+    position: relative;
+    animation-name: moveheroonephoto;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes moveheroonephoto {
+    from {left: 0;}
+    to {left: 200px;}
+}
+
+
+
+.phototwo{
+    margin-left: -50px;
+    margin-top: -180px;
+    position: relative;
+    animation-name: moveherotwophoto;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes moveherotwophoto {
+    from {left: 200px;}
+    to {left: 0px;}
+}
+
+
+
+.photothree{
+    margin-top: -50px;
+    position: relative;
+    animation-name: moveherothreephoto;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes moveherothreephoto {
+    from {left: 0px;}
+    to {left: 100px;}
+}
+
+.icone-style-border{
+    border: 2px solid gray;
+    box-shadow: 0px 01px 20px 0 white;
+    border-radius: 100px;
+
+}
+
+.icone-style{
+    border-radius: 100px;
+}
+
+
+.commonimage{
+    border-radius: 50px;
+    display: inline-block;
+}
+
+
+
+
+
+.aboutimg-one{
+    height: 200px;
+    margin-right: -50px;
+    position: relative;
+    animation-name: moveaboutonephoto;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes moveaboutonephoto {
+    from {left: 50px;}
+    to {left: 0px;}
+}
+
+
+.aboutimg-three{
+    height: 200px;
+    margin-left: -50px;
+    position: relative;
+    animation-name: moveaboutthreephoto;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes moveaboutthreephoto {
+    from {left: 0px;}
+    to {left: 50px;}
+}
+
+
+.aboutimg-two{
+    height: 250px;
+    margin-top: -30px;
+    z-index: 1;
+    position: relative;
+    animation-name: moveabouttwophoto;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes moveabouttwophoto {
+    from {height: 200px; margin-top: 0px;}
+    to {height: 250px; margin-top: -30px;}
+}
+
+
+
+
+.custom-style{
+    margin-top: 100px !important;
+}
+
+
+.test-image-pp{
+    width: 140px;
+    height: 150px;
+    border-radius: 100px;
+    margin-top: -80px !important;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink-caret .5s step-end alternate-reverse infinite;
+    white-space: nowrap;
+    font-size: 50px;
+    font-weight: bold;
+    border-right: 3px solid;
+    padding-right: 10px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+
+
+.animationboxx:hover{
+    background-color: rgb(122, 89, 47);
+    transition: all .5s ease-in-out;
+}
+
+
+.btn-animation:hover{
+    transition: all .5s ease-in-out !important;
+    background-color: rgb(145, 145, 181 )!important;
+}
+
+
+
+.hover-dasboad-item{
+    background-color: rgb(238, 46, 46);
+}
+
+
+
+.hover-dasboad-item:hover{
+    transition: .5s linear;
+    background-color: rgb(123, 123, 96);
+    cursor: pointer;
+}
+
+.addpost{
+    display: none;
+}
+
+
+.linstly{
+    border: 2px solid black;
+    background-color: black;
+}

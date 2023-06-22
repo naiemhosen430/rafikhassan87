@@ -1,0 +1,15 @@
+<%- include('portals/header') %>
+
+<section class="col-12 col-lg-6 col-md-9 shadow p-4 rounded m-auto my-4">
+    <div>
+        <div>
+            <h3 class="text-info py-2 fs-5">Thanks <%= newmessage.sendmsgname %> for your message. I will get in touch you soon.</h3>
+            <h6><span class="text-info d-inline-block px-2">Your name: </span><span class="text-light text-bolder"><%= newmessage.sendmsgname %></span></h6>
+            <h6><span class="text-info d-inline-block px-2">Your phone number: </span><span class="text-light text-bolder"><%= newmessage.sendmsgphone %></span></h6>
+            <h6><span class="text-info d-inline-block px-2">Your message: </span><span class="text-light text-bolder"><%= newmessage.sendmsgtext %></span></h6>
+        </div>
+        <a class="text-bolder bg-danger text-light shadow rounded py-2 px-4 d-inline-block m-auto text-decoration-none" href="/">Go to home</a>
+    </div>
+</section>
+
+
